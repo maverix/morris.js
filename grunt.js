@@ -36,12 +36,12 @@ module.exports = function (grunt) {
     min: {
       'morris.min.js': 'morris.js'
     },
-    mocha: {
-      spec: {
-        src: 'spec/specs.html',
-        run: true
-      }
-    },
+    //mocha: {
+    //  spec: {
+    //    src: 'spec/specs.html',
+    //    run: true
+    //  }
+    //},
     watch: {
       files: ['lib/**/*.coffee', 'spec/lib/**/*.coffee', 'spec/support/**/*.coffee', 'less/**/*.less'],
       tasks: 'default'
@@ -49,8 +49,8 @@ module.exports = function (grunt) {
   });
 
   grunt.loadNpmTasks('grunt-coffee');
-  grunt.loadNpmTasks('grunt-mocha');
+  //grunt.loadNpmTasks('grunt-mocha');
   grunt.loadNpmTasks('grunt-contrib-less');
 
-  grunt.registerTask('default', 'concat coffee less min mocha');
+  grunt.registerTask('default', 'concat coffee less min');
 };
